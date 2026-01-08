@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pan de Dios:b </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --rosa-fuerte: #ff0a54;
+            --fondo-oscuro: rgba(0, 0, 0, 0.6);
+        }
+
+        body {
+            /* 1. AQUÍ PONES TU IMAGEN DE FONDO DE PANTALLA COMPLETA */
+            background-image: url('jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+            display: flex;
+            flex-direction: row;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1000px;
+            width: 100%;
+            overflow: hidden;
+            backdrop-filter: blur(5px); /* Efecto borroso elegante */
+        }
+
+        /* --- LADO IZQUIERDO: TUS 3 FOTOS --- */
+        .visual-side {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(255, 192, 203, 0.2);
+            border-right: 2px dashed var(--rosa-fuerte);
+        }
+
+        .photo-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .user-photo {
+            width: 180px; /* Tamaño ajustable */
+            height: 180px;
+            object-fit: cover; /* Para que la foto no se estire */
+            border-radius: 15px;
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Animación diferente para cada foto */
+        .p1 { animation-delay: 0s; }
+        .p2 { animation-delay: 1s; width: 140px; height: 140px; } /* Foto central un poco diferente */
+        .p3 { animation-delay: 2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        /* --- LADO DERECHO: POEMA --- */
+        .poem-side {
+            width: 55%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--rosa-fuerte);
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        .stanza {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #222;
+            font-size: 1.05rem;
+        }
+
+        .lyrics-box {
+            background: rgba(255, 10, 84, 0.05);
+            border-left: 5px solid var(--rosa-fuerte);
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        strong { color: var(--rosa-fuerte); }
+
+        @media (max-width: 800px) {
+            .main-container { flex-direction: column; }
+            .visual-side, .poem-side { width: 100%; }
+
+            /* Esto se activa solo en pantallas menores a 768px (celulares) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Apila las fotos arriba y el texto abajo */
+        width: 95%;             /* Aprovecha casi toda la pantalla */
+        margin: 10px auto;
+    }
+
+    .visual-side {
+        width: 100%;           
+        border-right: none;
+        border-bottom: 2px dashed var(--rosa-fuerte);
+        padding: 20px;
+    }
+
+    .poem-side {
+        width: 100%;            
+        padding: 25px;
+        text-align: center;     
+    }
+
+    h1 {
+        font-size: 2.5rem;      
+    }
+
+    .user-photo {
+        width: 120px;        
+        height: 120px;
+    }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="visual-side">
+            <div class="photo-stack">
+                <img src="foto1.jpg" alt="Alexandra 1" class="user-photo p1">
+                <img src="foto3" alt="Alexandra 2" class="user-photo p2">
+                <img src="foto4" alt="Alexandra 3" class="user-photo p3">
+            </div>
+            
+            <p style="margin-top: 20px; color: var(--rosa-fuerte); font-weight: bold;">
+                Nuestra historia ❤️
+            </p>
+        </div>
+
+        <div class="poem-side">
+            <h1>Alexandra</h1>
+            
+            <div class="stanza">
+                Tú tan bella y tan delicada, mi <strong>Pan de Dios</strong>,<br>
+                yo tan loco por tus ojos y ese brillo veloz.<br>
+                Me marcaste para siempre como un tattoo,<br>
+                solo quiero una rutina si estás tú.
+            </div>
+
+            <div class="lyrics-box">
+                "Tú y yo somos como el ying y el yang,<br>
+                Mary Jane y Spider-Man.<br>
+                No se me ocurre mejor plan,<br>
+                que tú y yo, una casa frente al mar."
+            </div>
+
+            <div class="stanza">
+                Sé que eres <strong>un poco desconfiada</strong>, lo sé bien,<br>
+                pero en tu cabello y tu risa me siento al cien.<br>
+                Eres la musa de este jugador, mi show favorito,<br>
+                amarte a ti, Alexandra, es mi plan más bonito.
+            </div>
+        </div>
+    </div>
+
+</body>
